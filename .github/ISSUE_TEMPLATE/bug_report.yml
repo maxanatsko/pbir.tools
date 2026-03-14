@@ -9,6 +9,18 @@ body:
         Thanks for taking the time to report this. Please fill in as much detail as you can.
 
   - type: dropdown
+    id: skills
+    attributes:
+      label: Did you use the pbir skills?
+      description: Skills are installed via `pbir setup` and provide guided workflows to AI agents
+      options:
+        - "Yes"
+        - "No"
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
     id: tool
     attributes:
       label: Which tool?
@@ -89,7 +101,6 @@ body:
         - PBIP (thick)
         - PBIP (thin)
         - PBIR
-        - Not applicable
     validations:
       required: false
 
