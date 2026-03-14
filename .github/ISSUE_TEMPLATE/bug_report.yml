@@ -23,7 +23,7 @@ body:
     id: version
     attributes:
       label: Version
-      description: Run `pbir --version` to find this
+      description: What version of the tool are you using? For the CLI, run `pbir --version` to find this.
       placeholder: "e.g. 0.9.0"
     validations:
       required: true
@@ -38,18 +38,6 @@ body:
         - Windows 11
         - Windows 10
         - Linux
-    validations:
-      required: true
-
-  - type: dropdown
-    id: install-method
-    attributes:
-      label: How did you install?
-      options:
-        - Standalone binary (dist/pbir)
-        - uv tool install
-        - pip install (editable)
-        - From source (uv run pbir)
     validations:
       required: true
 
