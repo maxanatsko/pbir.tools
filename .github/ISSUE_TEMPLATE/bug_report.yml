@@ -35,7 +35,7 @@ body:
     id: version
     attributes:
       label: Version
-      description: What version of the tool are you using? For the CLI, run `pbir --version` to find this.
+      description: "CLI: `pbir --version` | MCP: `pbir-mcp --version` | Object Model: `python -c \"import pbir_object_model; print(pbir_object_model.__version__)\"`"
       placeholder: "e.g. 0.9.0"
     validations:
       required: true
@@ -58,7 +58,7 @@ body:
     attributes:
       label: What happened?
       description: A clear description of the bug
-      placeholder: "When I ran `pbir validate`, it crashed with..."
+      placeholder: "When I ran X, it crashed with..."
     validations:
       required: true
 
@@ -76,10 +76,9 @@ body:
       label: Steps to reproduce
       description: Minimal steps to trigger the issue
       placeholder: |
-        1. Create a new report: `pbir new report "Test.Report" -c "..."`
-        2. Add a visual: `pbir add visual card "Test.Report/Page 1.Page"`
-        3. Run: `pbir validate "Test.Report"`
-        4. See error
+        1. ...
+        2. ...
+        3. See error
     validations:
       required: true
 
@@ -87,7 +86,7 @@ body:
     id: error-output
     attributes:
       label: Error output
-      description: Paste the full error or traceback. Use `pbir --debug <command>` for detailed output.
+      description: Paste the full error, traceback, or log output. For CLI, use `pbir --debug <command>` for verbose output.
       render: shell
 
   - type: dropdown
