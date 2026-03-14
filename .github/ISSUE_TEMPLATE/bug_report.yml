@@ -105,6 +105,7 @@ body:
     attributes:
       label: Report format
       description: What kind of report were you working with?
+      multiple: true
       options:
         - PBIX (thick)
         - PBIX (thin)

@@ -69,6 +69,21 @@ body:
       required: false
 
   - type: dropdown
+    id: report-type
+    attributes:
+      label: Report format
+      description: What kind of report were you working with?
+      multiple: true
+      options:
+        - PBIX (thick)
+        - PBIX (thin)
+        - PBIP (thick)
+        - PBIP (thin)
+        - PBIR
+    validations:
+      required: false
+
+  - type: dropdown
     id: os
     attributes:
       label: Operating system
