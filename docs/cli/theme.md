@@ -1,8 +1,8 @@
 # Theme and Schema
 
-Inspect and modify report themes, and discover visual properties.
+Inspect and modify report themes, and discover what properties are available on visual types.
 
-Theme formatting applies to all visuals and should be preferred over bespoke visual-level formatting.
+Themes control the default look of every visual in a report (colors, fonts, borders). Setting formatting at the theme level is preferred over formatting each visual individually -- it's more consistent and easier to maintain.
 
 ## theme
 

@@ -1,6 +1,6 @@
 # Operations
 
-Validate, back up, publish, download, and automate with scripts.
+Validate reports, create backups, publish to Fabric workspaces, and automate with Python scripts. The most important command here is `validate` -- run it after every change to catch problems early.
 
 ## validate
 

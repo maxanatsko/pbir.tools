@@ -1,6 +1,8 @@
 # CLI Command Reference
 
-The `pbir` CLI provides a filesystem-like interface for Power BI report manipulation.
+The `pbir` CLI lets you work with Power BI reports from the terminal -- navigating, creating, and formatting reports using commands instead of the Power BI Desktop GUI.
+
+New to the terminal? Start with the [Getting Started guide](../getting-started.md).
 
 ## Install
 

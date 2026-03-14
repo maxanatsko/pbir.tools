@@ -1,6 +1,8 @@
 # Data, Fields, Filters, DAX, and Bookmarks
 
-Manage field bindings, filters, extension measures, and bookmarks.
+Connect visuals to data (fields), control what data users see (filters), add report-level calculations (DAX measures), and save report states (bookmarks).
+
+> **Fields** are columns and measures from your semantic model. When you "bind" a field to a visual, you're telling that visual what data to show -- like dragging a column into a field well in Power BI Desktop.
 
 ## fields
 

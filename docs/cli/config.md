@@ -1,6 +1,6 @@
 # Configuration and Setup
 
-CLI configuration and agent skill installation.
+Configure how pbir behaves and install AI agent skills. Most users won't need to change configuration -- the defaults work out of the box.
 
 ## config
 

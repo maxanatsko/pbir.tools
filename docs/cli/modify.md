@@ -1,6 +1,8 @@
 # Modify and Format
 
-Set properties, remove objects, and format visuals and pages.
+Change how visuals look, set properties, remove objects, and format pages. This is where bulk operations shine -- you can format every visual in a report with one command instead of clicking through the GUI.
+
+> **Glob patterns** like `**/*.Visual` mean "match all visuals in all pages". When you use them with `set`, you must add `-f` (force) as a safety measure to confirm you want to change many things at once.
 
 ## set
 

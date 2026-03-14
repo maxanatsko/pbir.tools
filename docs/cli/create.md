@@ -1,6 +1,6 @@
 # Create and Duplicate
 
-Create new reports, pages, visuals, and duplicate existing objects.
+Create new reports, pages, and visuals, or copy existing ones. These commands add to your report -- use `pbir rm` to remove things, and always run `pbir validate` after making changes.
 
 ## new report
 

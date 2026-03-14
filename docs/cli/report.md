@@ -1,6 +1,6 @@
 # Report Operations
 
-Report-level operations: rename, rebind, convert, merge, and split.
+Operations that affect the entire report: renaming, connecting to a different data model, converting between formats (PBIR/PBIP/PBIX), and combining or splitting reports.
 
 ## rename
 

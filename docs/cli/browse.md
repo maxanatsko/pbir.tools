@@ -1,6 +1,8 @@
 # Browse and Query
 
-Explore report structure, inspect properties, and query semantic models.
+Explore what's inside a report before making changes. These commands are read-only -- they won't modify anything.
+
+> **What's a flag?** Options like `-v` or `--verbose` that you add after a command to change its behavior. Short form (`-v`) and long form (`--verbose`) do the same thing.
 
 ## ls
 
