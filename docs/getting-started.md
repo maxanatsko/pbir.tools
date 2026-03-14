@@ -15,7 +15,7 @@ With pbir, you can:
 - Publish reports to Fabric workspaces without opening Power BI Desktop
 - Script complex report changes with Python
 
-It works with **PBIR format** reports -- the folder-based format that Power BI Desktop uses when you save as a Power BI Project (.pbip).
+It works with [**PBIR format**](https://learn.microsoft.com/power-bi/developer/projects/projects-report#pbir-format) reports -- the folder-based format that Power BI Desktop uses when you save as a Power BI Project (.pbip).
 
 ---
 

@@ -15,27 +15,27 @@
 </p>
 
 <p align="center">
-  Create, format, validate, and publish Power BI reports from the terminal -- no Power BI Desktop required.
+  Create, format, validate, and publish Power BI reports with code or agents -- say goodbye and good riddance to the Format Pane!
 </p>
 
 > [!WARNING]
-> This project is under active development. Back up your report files before using the CLI on them.
-> Use `pbir backup "Report.Report"` to create a snapshot before making changes.
+> This project is in beta release. To be safe, back up your report files manually before using the PBIR tools on them.
 
----
 
-## What is pbir?
+## What are pbir tools?
 
-**pbir** lets you work with Power BI reports (PBIR format) as files and folders instead of through the GUI. You can:
+A collection of tools that let you work with Power BI reports in the [PBIR format](https://learn.microsoft.com/power-bi/developer/projects/projects-report#pbir-format). You can:
 
-- **Browse** reports, pages, visuals, and their data bindings from the terminal
-- **Create** reports, pages, and visuals with a single command
+- **Browse** reports, pages, visuals, filters and their data bindings or formatting from the terminal
+- **Create** reports, pages, visuals, filters, and more with a single command
 - **Bulk-format** dozens of visuals at once instead of clicking through each one
 - **Validate** reports for broken fields, schema issues, and quality problems
-- **Publish** reports to Fabric workspaces directly from the command line
+- **Enhance** your workflow with convenient helpers like converting between PBIP and PBIX, working with themes, thin-report measures, visual calculations, images, and more
 - **Script** complex report changes with Python
 
-New to the terminal? Start with the [Getting Started guide](docs/getting-started.md) -- it covers terminal basics, installation, and your first 5 minutes with pbir.
+> [!NOTE]
+> New to the terminal? Start with the [Getting Started guide](docs/getting-started.md)
+> It covers terminal basics, installation, and your first 5 minutes with pbir.
 
 ---
 
@@ -60,16 +60,17 @@ copy %USERPROFILE%\Downloads\pbir.exe %LOCALAPPDATA%\pbir\pbir.exe
 ```
 Then add `%LOCALAPPDATA%\pbir` to your system PATH ([instructions](https://www.architectryan.com/2018/03/17/add-to-the-windows-path-variable/)). Open a new terminal and run `pbir --version`.
 
-### Build from Source
+### Install from PyPi
 
-Requires Python 3.10+.
+Requires Python 3.10+. We also recommend `uv`.
 
 ```bash
-git clone https://github.com/maxanatsko/pbir.tools && cd pbir.tools
-pip install -e ./pbir-object-model && pip install -e ./pbir-cli
+pip install pbir-object-model, pbir-cli
+# or
+uv get pbir-object-model, pbir-cli
 ```
 
-Optional: [Fabric CLI](https://learn.microsoft.com/fabric/cli/) for cloud operations (publish, download).
+You also must download and install the [Fabric CLI](https://learn.microsoft.com/fabric/cli/) to work with connected models and download/publish reports.
 
 ---
 
@@ -77,12 +78,26 @@ Optional: [Fabric CLI](https://learn.microsoft.com/fabric/cli/) for cloud operat
 
 ### pbir CLI
 
+![PBIR-cli](docs/pbir.gif)
+
 ```bash
-pbir ls                                        # Find reports in current directory
-pbir tree "Report.Report" -v                   # See structure with fields
-pbir model "Report.Report" -d                  # Discover tables, columns, measures
+# Setup memory files, skills, etc.
+pbir setup
+
+# Find reports in current directory
+pbir ls
+
+# See structure with fields
+pbir tree "Report.Report" -v
+
+# Discover tables, columns, measures
+pbir model "Report.Report" -d
+
+# Example of adding a visual
 pbir add visual card "Report.Report/Page.Page" --title "Revenue" -d "Values:Sales.Revenue"
-pbir validate "Report.Report"                  # Always validate after changes
+
+# Always validate after changes
+pbir validate "Report.Report"
 ```
 
 > Tip: Run `pbir <command> --help` for help on any command.
@@ -182,7 +197,7 @@ Each part has a **type suffix** (`.Report`, `.Page`, `.Visual`) that tells pbir 
 
 ## AI Disclaimer
 
-This project was built with assistance from [Claude Code](https://claude.ai/claude-code) and [Gemini CLI](https://github.com/google-gemini/gemini-cli). AI-generated code has been reviewed and tested but may contain errors. Use at your own risk.
+This project was built with assistance from [Claude Code](https://claude.ai/claude-code). AI-generated code has been reviewed and tested but may contain errors. Use at your own risk.
 
 ---
 
