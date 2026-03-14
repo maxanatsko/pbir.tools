@@ -1,0 +1,109 @@
+name: Bug Report
+description: Report a crash, error, or unexpected behavior
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. Please fill in as much detail as you can.
+
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Which tool?
+      options:
+        - pbir CLI
+        - pbir MCP Server
+        - pbir Object Model (Python API)
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Run `pbir --version` to find this
+      placeholder: "e.g. 0.9.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+        - Windows 11
+        - Windows 10
+        - Linux
+    validations:
+      required: true
+
+  - type: dropdown
+    id: install-method
+    attributes:
+      label: How did you install?
+      options:
+        - Standalone binary (dist/pbir)
+        - uv tool install
+        - pip install (editable)
+        - From source (uv run pbir)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug
+      placeholder: "When I ran `pbir validate`, it crashed with..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      placeholder: "I expected the command to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Minimal steps to trigger the issue
+      placeholder: |
+        1. Create a new report: `pbir new report "Test.Report" -c "..."`
+        2. Add a visual: `pbir add visual card "Test.Report/Page 1.Page"`
+        3. Run: `pbir validate "Test.Report"`
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-output
+    attributes:
+      label: Error output
+      description: Paste the full error or traceback. Use `pbir --debug <command>` for detailed output.
+      render: shell
+
+  - type: dropdown
+    id: report-type
+    attributes:
+      label: Report format
+      description: What kind of report were you working with?
+      options:
+        - Thin report (connected to semantic model)
+        - Thick report (embedded model)
+        - Not applicable
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Anything else -- screenshots, report structure, workarounds tried
