@@ -9,6 +9,17 @@ body:
         Thanks for testing pbir! Any feedback helps -- first impressions, rough edges, things that felt great.
 
   - type: dropdown
+    id: usage-mode
+    attributes:
+      label: How were you using the tool?
+      options:
+        - Human (manual CLI / interactive)
+        - AI agent (e.g. Claude Code, Cursor, Copilot)
+        - Automation (e.g. CI/CD pipeline, script)
+    validations:
+      required: true
+
+  - type: dropdown
     id: tool
     attributes:
       label: Which tool(s) did you try?

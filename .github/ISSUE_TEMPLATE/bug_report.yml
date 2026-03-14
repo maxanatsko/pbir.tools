@@ -9,6 +9,17 @@ body:
         Thanks for taking the time to report this. Please fill in as much detail as you can.
 
   - type: dropdown
+    id: usage-mode
+    attributes:
+      label: How were you using the tool?
+      options:
+        - Human (manual CLI / interactive)
+        - AI agent (e.g. Claude Code, Cursor, Copilot)
+        - Automation (e.g. CI/CD pipeline, script)
+    validations:
+      required: true
+
+  - type: dropdown
     id: skills
     attributes:
       label: Did you use the pbir skills?
