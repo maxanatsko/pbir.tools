@@ -84,8 +84,11 @@ body:
       label: Report format
       description: What kind of report were you working with?
       options:
-        - Thin report (connected to semantic model)
-        - Thick report (embedded model)
+        - PBIX (thick)
+        - PBIX (thin)
+        - PBIP (thick)
+        - PBIP (thin)
+        - PBIR
         - Not applicable
     validations:
       required: false
