@@ -1,0 +1,71 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea for pbir? We'd love to hear it.
+
+  - type: dropdown
+    id: usage-mode
+    attributes:
+      label: How were you using the tool?
+      options:
+        - Human (manual CLI / interactive)
+        - AI agent (e.g. Claude Code, Cursor, Copilot)
+        - Automation (e.g. CI/CD pipeline, script)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Which tool?
+      options:
+        - pbir CLI
+        - pbir MCP Server
+        - pbir Object Model (Python API)
+        - Not sure / All
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the workflow pain point or gap
+      placeholder: "Currently I have to manually edit JSON to change... It would be faster if..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: How do you think this should work?
+      placeholder: |
+        A new command like:
+        ```
+        pbir visuals <something> "Report.Report/Page.Page/Visual.Visual" --flag value
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any workarounds you've tried or other approaches
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this to your workflow?
+      options:
+        - Nice to have
+        - Would use regularly
+        - Blocking my workflow
+    validations:
+      required: true

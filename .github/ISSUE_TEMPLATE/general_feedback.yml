@@ -1,0 +1,103 @@
+name: General Feedback
+description: Share your experience, impressions, or suggestions
+title: "[Feedback]: "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing pbir! Any feedback helps -- first impressions, rough edges, things that felt great.
+
+  - type: dropdown
+    id: usage-mode
+    attributes:
+      label: How were you using the tool?
+      options:
+        - Human (manual CLI / interactive)
+        - AI agent (e.g. Claude Code, Cursor, Copilot)
+        - Automation (e.g. CI/CD pipeline, script)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Which tool(s) did you try?
+      multiple: true
+      options:
+        - pbir CLI
+        - pbir MCP Server
+        - pbir Object Model (Python API)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: experience
+    attributes:
+      label: Your Power BI experience level
+      options:
+        - Beginner (< 1 year)
+        - Intermediate (1-3 years)
+        - Advanced (3+ years)
+        - Expert / MVP
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-worked
+    attributes:
+      label: What worked well?
+      description: Commands, workflows, or features that felt good
+    validations:
+      required: false
+
+  - type: textarea
+    id: what-didnt
+    attributes:
+      label: What felt rough or confusing?
+      description: Pain points, unclear commands, missing docs, unexpected behavior
+    validations:
+      required: false
+
+  - type: textarea
+    id: workflow
+    attributes:
+      label: What were you trying to do?
+      description: Describe your use case -- what report task brought you here?
+      placeholder: "I was trying to bulk-format 20 visuals across 5 pages..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: report-type
+    attributes:
+      label: Report format
+      description: What kind of report were you working with?
+      multiple: true
+      options:
+        - PBIX (thick)
+        - PBIX (thin)
+        - PBIP (thick)
+        - PBIP (thin)
+        - PBIR
+    validations:
+      required: false
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+        - Windows 11
+        - Windows 10
+        - Linux
+    validations:
+      required: true
+
+  - type: textarea
+    id: anything-else
+    attributes:
+      label: Anything else?
+      description: Free-form thoughts, suggestions, or questions

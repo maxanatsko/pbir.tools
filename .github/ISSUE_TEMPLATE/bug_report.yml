@@ -1,0 +1,122 @@
+name: Bug Report
+description: Report a crash, error, or unexpected behavior
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. Please fill in as much detail as you can.
+
+  - type: dropdown
+    id: usage-mode
+    attributes:
+      label: How were you using the tool?
+      options:
+        - Human (manual CLI / interactive)
+        - AI agent (e.g. Claude Code, Cursor, Copilot)
+        - Automation (e.g. CI/CD pipeline, script)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: skills
+    attributes:
+      label: Did you use the pbir skills?
+      description: Skills are installed via `pbir setup` and provide guided workflows to AI agents
+      options:
+        - "Yes"
+        - "No"
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Which tool?
+      options:
+        - pbir CLI
+        - pbir MCP Server
+        - pbir Object Model (Python API)
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: "CLI: `pbir --version` | MCP: `pbir-mcp --version` | Object Model: `python -c \"import pbir_object_model; print(pbir_object_model.__version__)\"`"
+      placeholder: "e.g. 0.9.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+        - Windows 11
+        - Windows 10
+        - Linux
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug
+      placeholder: "When I ran X, it crashed with..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      placeholder: "I expected the command to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Minimal steps to trigger the issue
+      placeholder: |
+        1. ...
+        2. ...
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-output
+    attributes:
+      label: Error output
+      description: Paste the full error, traceback, or log output. For CLI, use `pbir --debug <command>` for verbose output.
+      render: shell
+
+  - type: dropdown
+    id: report-type
+    attributes:
+      label: Report format
+      description: What kind of report were you working with?
+      multiple: true
+      options:
+        - PBIX (thick)
+        - PBIX (thin)
+        - PBIP (thick)
+        - PBIP (thin)
+        - PBIR
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Anything else -- screenshots, report structure, workarounds tried
