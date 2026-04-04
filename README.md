@@ -22,6 +22,16 @@
 
 ## Install
 
+### PyPI (recommended for agents)
+
+```bash
+uv tool install pbir-cli
+```
+
+Or with pip: `pip install pbir-cli`
+
+### Native installers
+
 Download the latest macOS or Windows installer from [GitHub Releases](https://github.com/maxanatsko/pbir.tools/releases).
 
 ### macOS
@@ -64,15 +74,27 @@ Report.Report/Page.Page/Visual.Visual
 
 ## AI Assistants
 
-If you use an assistant locally, `pbir setup` can install assistant-specific files for Claude Code, Cursor, Copilot, Gemini CLI, and Pi:
+`pbir` is built for agents. To get the most out of it with your AI coding assistant, install the **Power BI plugins** from the [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace. These plugins provide skills, hooks, and agents that teach your assistant how to work with Power BI reports, semantic models, themes, DAX, and more.
+
+**Option 1: Install plugins via `pbir setup`** (recommended)
 
 ```bash
-pbir setup --claude-code
-pbir setup --cursor
-pbir setup report "Sales.Report" --claude-hooks
+pbir setup
 ```
 
-`pbir script` also exists as an advanced Python-based escape hatch for custom automation. It is intentionally not the main public workflow and is only mentioned briefly in the CLI operations docs.
+This auto-detects which agents you have installed (Claude Code, Cursor, Copilot, Gemini CLI, Codex) and lets you pick which plugins to install interactively.
+
+```bash
+pbir setup --all                                # Install all plugins, all agents
+pbir setup --agent claude-code --all            # Claude Code only, all plugins
+pbir setup --plugin reports --plugin fabric-cli # Specific plugins
+```
+
+**Option 2: Install the marketplace directly**
+
+Follow the instructions at [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) to install the full marketplace plugin with all skills, agents, and hooks.
+
+**After installing**, your assistant will have access to skills for report creation, visual formatting, field binding, conditional formatting, theme management, filters, bookmarks, and more -- all driven by `pbir` commands under the hood.
 
 ## Documentation
 
