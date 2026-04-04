@@ -132,10 +132,15 @@ After installing, your agent will have access to skills for report creation, vis
 
 ## Safety
 
+- **We recommend you take a manual backup (copy + paste) of your report folder before using `pbir` for the first time.**
 - Run `pbir backup "Report.Report"` before larger edits.
 - Run `pbir validate "Report.Report"` after every mutation.
 - Use `-f` only when you intend bulk or destructive operations.
 - Treat publish, convert, merge, and split commands as higher-risk workflows.
+
+## Disclaimer
+
+This software is provided "as is", without warranty of any kind, express or implied. The authors are not responsible for any data loss, report corruption, or other damages resulting from the use of this tool. You use `pbir` at your own risk. Always maintain independent backups of your reports before making changes, especially with bulk operations, format conversion, merge, and publish workflows.
 
 ## Support
 
