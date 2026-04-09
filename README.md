@@ -86,7 +86,7 @@ Report.Report/Page.Page/Visual.Visual
 
 ## Agents & Plugins
 
-`pbir` is built for agents. Install the **Power BI plugins** from the [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace to give your agent skills for reports, semantic models, themes, DAX, and Fabric.
+`pbir` is built for humans but optimized for agents. Install the **Power BI plugins** from the [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace to give your agent skills for reports, semantic models, themes, DAX, and Fabric.
 
 <details>
 <summary><strong>Option 1: Install the marketplace directly</strong> (recommended)</summary>
