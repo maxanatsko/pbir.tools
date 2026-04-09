@@ -121,7 +121,7 @@ For users of Claude Code, GitHub Copilot, Cursor, Gemini CLI, Codex, or similar 
 
 ### Step 1: Install skills
 
-The CLI alone is not enough -- your agent needs **skills** that teach it how to use `pbir`. Without skills, the agent won't know the commands, patterns, or best practices.
+Your agent needs **skills** that teach it how to use `pbir` effectively.
 
 **Option A: `pbir setup`** (recommended)
 

@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-0.9.4-blue" alt="Version">
+  <img src="https://img.shields.io/badge/version-0.9.7-blue" alt="Version">
   <img src="https://img.shields.io/badge/Power_BI-F2C811?logo=powerbi&logoColor=000" alt="Power BI">
   <img src="https://img.shields.io/badge/Microsoft_Fabric-008272" alt="Microsoft Fabric">
   <img src="https://img.shields.io/badge/license-proprietary-lightgrey" alt="License">
@@ -23,7 +23,7 @@
 > `pbir.tools` is in beta. Back up reports before large edits, especially bulk formatting, conversion, merge, and publish workflows.
 
 > [!IMPORTANT]
-> After installing `pbir`, run `pbir setup` to install agent skills, or install them from the [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace. Without skills, your agent won't know how to use the CLI.
+> After installing `pbir`, run `pbir setup` to install agent skills, or install them from the [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace.
 
 ---
 
@@ -73,7 +73,9 @@ pbir ls                                                                # List re
 pbir tree "Sales.Report" -v                                            # Full structure with fields
 pbir model "Sales.Report" -d                                           # Model schema
 pbir add visual card "Sales.Report/Overview.Page" --title "Revenue"    # Add a visual
+pbir set "Sales.Report/**/*.Visual.title.fontSize" --value 14 -f      # Bulk formatting
 pbir validate "Sales.Report"                                           # Health check
+pbir publish "Workspace.Workspace/Sales.Report"                        # Deploy to Fabric
 ```
 
 `pbir` works with PBIR-format reports stored as folders, using paths like:
@@ -84,7 +86,7 @@ Report.Report/Page.Page/Visual.Visual
 
 ## Agents & Plugins
 
-`pbir` is built for agents. To get the most out of it, install the **Power BI plugins** from the [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace. These plugins provide skills, hooks, and agents that teach your agent how to work with Power BI reports, semantic models, themes, DAX, and more.
+`pbir` is built for agents. Install the **Power BI plugins** from the [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace to give your agent skills for reports, semantic models, themes, DAX, and Fabric.
 
 <details>
 <summary><strong>Option 1: Install the marketplace directly</strong> (recommended)</summary>
@@ -120,7 +122,7 @@ pbir setup --plugin reports --plugin fabric-cli # Specific plugins
 
 </details>
 
-After installing, your agent will have access to skills for report creation, visual formatting, field binding, conditional formatting, theme management, filters, bookmarks, and more -- all driven by `pbir` commands under the hood.
+After installing, your agent can create reports, format visuals, bind fields, manage themes, filters, bookmarks, and publish to Fabric -- all driven by `pbir` commands.
 
 ## Documentation
 
