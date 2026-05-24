@@ -2,7 +2,7 @@
   <img src="pbir.gif" alt="pbir demo" width="700">
 </p>
 
-<h1 align="center">pbir.tools</h1>
+<h1 align="center">PBIR Tools</h1>
 
 <p align="center">
   <strong>CLI tools for Power BI report automation; built for humans, optimized for agents</strong>
