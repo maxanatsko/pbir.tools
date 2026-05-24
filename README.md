@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-0.9.7-blue" alt="Version">
+  <a href="https://github.com/maxanatsko/pbir.tools/releases"><img src="https://img.shields.io/github/v/release/maxanatsko/pbir.tools?include_prereleases&label=version&color=blue" alt="Version"></a>
   <img src="https://img.shields.io/badge/Power_BI-F2C811?logo=powerbi&logoColor=000" alt="Power BI">
   <img src="https://img.shields.io/badge/Microsoft_Fabric-008272" alt="Microsoft Fabric">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Custom--Non--Commercial-orange" alt="License"></a>
