@@ -9,21 +9,21 @@
 </p>
 
 <p align="center">
-  Browse, edit, validate, and publish PBIR reports from the terminal, or let Claude Code, Codex, or Copilot drive the CLI after running <code>pbir setup</code>.
+  Browse, edit, validate, and publish PBIR reports from the terminal, or let Claude Code, Codex, or Copilot drive the CLI.
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/version-0.9.7-blue" alt="Version">
   <img src="https://img.shields.io/badge/Power_BI-F2C811?logo=powerbi&logoColor=000" alt="Power BI">
   <img src="https://img.shields.io/badge/Microsoft_Fabric-008272" alt="Microsoft Fabric">
-  <img src="https://img.shields.io/badge/license-proprietary-lightgrey" alt="License">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Custom--Non--Commercial-orange" alt="License"></a>
 </p>
 
 > [!WARNING]
 > `pbir.tools` is in beta. Back up reports before large edits, especially bulk formatting, conversion, merge, and publish workflows.
 
 > [!IMPORTANT]
-> After installing `pbir`, run `pbir setup` to install agent skills, or install them from the [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace.
+> After installing `pbir`, install agent skills from the [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace.
 
 ---
 
@@ -88,9 +88,6 @@ Report.Report/Page.Page/Visual.Visual
 
 `pbir` is built for humans but optimized for agents. Install the **Power BI plugins** from the [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace to give your agent skills for reports, semantic models, themes, DAX, and Fabric.
 
-<details>
-<summary><strong>Option 1: Install the marketplace directly</strong> (recommended)</summary>
-
 Follow the instructions at [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) to install the full marketplace plugin with all skills, agents, and hooks. After installing, run `/plugin` in your agent to enable auto-update and install plugins.
 
 **Claude Code:**
@@ -102,25 +99,6 @@ claude plugin marketplace add data-goblin/power-bi-agentic-development
 ```bash
 copilot plugin install data-goblin/power-bi-agentic-development
 ```
-
-</details>
-
-<details>
-<summary><strong>Option 2: Install plugins via <code>pbir setup</code></strong></summary>
-
-```bash
-pbir setup
-```
-
-This auto-detects which agents you have installed (Claude Code, Cursor, Copilot, Gemini CLI, Codex) and lets you pick which plugins to install interactively.
-
-```bash
-pbir setup --all                                # Install all plugins, all agents
-pbir setup --agent claude-code --all            # Claude Code only, all plugins
-pbir setup --plugin reports --plugin fabric-cli # Specific plugins
-```
-
-</details>
 
 After installing, your agent can create reports, format visuals, bind fields, manage themes, filters, bookmarks, and publish to Fabric -- all driven by `pbir` commands.
 

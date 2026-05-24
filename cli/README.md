@@ -29,7 +29,7 @@ If you are new to the command line, start with [../getting-started.md](../gettin
 | Data & State | `fields`, `filters`, `dax`, `bookmarks`, `annotations` | Manage bindings, filters, measures, bookmarks, and metadata | [data.md](data.md) |
 | Theme & Schema | `theme`, `schema` | Apply defaults at scale and discover valid property names | [theme.md](theme.md) |
 | Operations | `validate`, `backup`, `restore`, `download`, `publish`, `open` | Protect, verify, move, and ship reports | [ops.md](ops.md) |
-| Config & Setup | `config`, `setup` | Control CLI behavior and install agent plugins and skills | [config.md](config.md) |
+| Config | `config` | Control CLI behavior | [config.md](config.md) |
 | Report-Wide Changes | `report` | Rename, rebind, convert, merge, and split whole reports | [report.md](report.md) |
 | End-to-End Examples | Common workflows | See realistic command sequences, not isolated commands | [workflows.md](workflows.md) |
 

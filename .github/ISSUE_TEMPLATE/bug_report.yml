@@ -23,7 +23,7 @@ body:
     id: skills
     attributes:
       label: Did you use the pbir skills?
-      description: Skills are installed via `pbir setup` and provide guided workflows to AI agents
+      description: Skills are installed via the plugin marketplace and provide guided workflows to AI agents
       options:
         - "Yes"
         - "No"

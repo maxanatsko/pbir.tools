@@ -121,25 +121,7 @@ For users of Claude Code, GitHub Copilot, Cursor, Gemini CLI, Codex, or similar 
 
 ### Step 1: Install skills
 
-Your agent needs **skills** that teach it how to use `pbir` effectively.
-
-**Option A: `pbir setup`** (recommended)
-
-```bash
-pbir setup
-```
-
-This auto-detects your installed agents and lets you pick which Power BI plugins to install. Skills, hooks, and agent configs are written to the right directories for each agent.
-
-```bash
-pbir setup --all                                # All plugins, all agents
-pbir setup --agent claude-code --all            # Claude Code only
-pbir setup --plugin reports --plugin fabric-cli # Specific plugins
-```
-
-**Option B: Install the marketplace directly**
-
-Install the full [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace, which includes skills for reports, semantic models, themes, DAX, Fabric CLI, and more.
+Your agent needs **skills** that teach it how to use `pbir` effectively. Install the full [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace, which includes skills for reports, semantic models, themes, DAX, Fabric CLI, and more.
 
 ```bash
 # Claude Code

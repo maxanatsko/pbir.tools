@@ -1,12 +1,11 @@
-# Configuration and Agent Setup
+# Configuration
 
-These commands control how `pbir` behaves on your machine and help you set up agent-friendly local files.
+These commands control how `pbir` behaves on your machine.
 
 Most users will only touch this section occasionally, usually when:
 
 - setting a preferred output or debug mode
 - checking where config and schema files live
-- installing skills and plugins for an agent they already use
 
 ## `pbir config`
 
@@ -28,34 +27,6 @@ Use it when you want to make the CLI behave more predictably across sessions ins
 | `init` | Create a default config file |
 | `set` | Update a config value |
 | `paths` | Show where config, templates, and schemas are resolved from |
-
-## `pbir setup`
-
-`pbir setup` installs Power BI plugins from the [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace. These plugins provide skills, hooks, and agents that teach your coding agent how to use `pbir` effectively.
-
-It auto-detects which agents you have installed and lets you pick which plugins to install interactively.
-
-```bash
-pbir setup                                      # Interactive (detect agents)
-pbir setup --all                                # Install all plugins, all agents
-pbir setup --agent claude-code --all            # Claude Code only, all plugins
-pbir setup --plugin reports --plugin fabric-cli # Specific plugins
-pbir setup --force                              # Force reinstall
-pbir setup uninstall                            # Show removal instructions
-```
-
-| Flag | Purpose |
-|---|---|
-| `--agent` / `-a` | Target agent: `claude-code`, `copilot`, `cursor`, `gemini`, `codex` |
-| `--plugin` / `-p` | Specific plugin(s) to install (repeatable) |
-| `--all` | Install all available plugins |
-| `--force` / `-f` | Force reinstall plugins |
-
-For report-specific Claude Code hooks:
-
-```bash
-pbir setup report "Sales.Report" --claude-hooks
-```
 
 ## Environment Variables
 
