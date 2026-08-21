@@ -11,7 +11,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/version-0.9.0--beta-blue" alt="Version">
   <img src="https://img.shields.io/badge/python-3.10+-green" alt="Python">
-  <img src="https://img.shields.io/badge/license-Non--Commercial-orange" alt="License">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Custom--Non--Commercial-orange" alt="License"></a>
 </p>
 
 <p align="center">
@@ -81,9 +81,6 @@ You also must download and install the [Fabric CLI](https://learn.microsoft.com/
 ![PBIR-cli](docs/pbir.gif)
 
 ```bash
-# Setup memory files, skills, etc.
-pbir setup
-
 # Find reports in current directory
 pbir ls
 
@@ -183,7 +180,7 @@ Each part has a **type suffix** (`.Report`, `.Page`, `.Visual`) that tells pbir 
 | **Data** | `fields` `filters` `dax` `bookmarks` | Bind fields, manage filters, write DAX measures | [data.md](docs/cli/data.md) |
 | **Theme** | `theme` `schema` | Edit theme colors/fonts, discover visual properties | [theme.md](docs/cli/theme.md) |
 | **Ops** | `validate` `backup` `publish` `download` `script` | Validate, back up, publish to Fabric, automate with Python | [ops.md](docs/cli/ops.md) |
-| **Config** | `config` `setup` | Configure the CLI, install AI agent skills | [config.md](docs/cli/config.md) |
+| **Config** | `config` | Configure the CLI | [config.md](docs/cli/config.md) |
 | **Report** | `report` | Rename, rebind, convert formats, merge, split reports | [report.md](docs/cli/report.md) |
 
 ---

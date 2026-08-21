@@ -21,7 +21,7 @@ pbir --help
 | **Data & Filters** | `fields` `filters` `dax` `bookmarks` `annotations` | [data.md](data.md) |
 | **Theme & Schema** | `theme` `schema` | [theme.md](theme.md) |
 | **Operations** | `validate` `backup` `restore` `publish` `download` `script` | [ops.md](ops.md) |
-| **Configuration** | `config` `setup` | [config.md](config.md) |
+| **Configuration** | `config` | [config.md](config.md) |
 | **Report** | `report rename` `report rebind` `report convert` `report merge` `report split-pages` | [report.md](report.md) |
 
 ## Path Syntax

@@ -1,6 +1,6 @@
-# Configuration and Setup
+# Configuration
 
-Configure how pbir behaves and install AI agent skills. Most users won't need to change configuration -- the defaults work out of the box.
+Configure how pbir behaves. Most users won't need to change configuration -- the defaults work out of the box.
 
 ## config
 
@@ -20,15 +20,6 @@ pbir config paths                                          # Show resolved paths
 | `init` | Create default `config.json` |
 | `set` | Set a configuration value |
 | `paths` | Show paths for config, templates, schemas |
-
-## setup
-
-Install agent skills for AI coding assistants (Claude Code, Cursor, etc.).
-
-```bash
-pbir setup                                                 # Install skills
-pbir setup --claude-code                                   # Claude Code specific
-```
 
 ## Environment Variables
 
